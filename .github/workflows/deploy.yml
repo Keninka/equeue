@@ -30,3 +30,11 @@ jobs:
           echo >~/.ssh/config "$SSH_CONFIG"
 
           rsync -avzP --exclude=/.git/ ./ srv:/var/www/kenina/
+
+      - name: Post notification
+        run: >
+          curl ntfy.sh/kenina-deploy-status
+          -H 'Title: Kenina has been published'
+          -H 'Tags: partying_face'
+          -H "Actions: view, View site, https://kenina.8086.cf"
+          -d 'You have become the boss of the gym.'
