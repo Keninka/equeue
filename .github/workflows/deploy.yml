@@ -23,12 +23,10 @@ jobs:
               HostName kenina.8086.cf
               Port 25565
         run: |
+          umask 077
+
           mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-
           echo >~/.ssh/key "$SSH_PRIVATE_KEY"
-          chmod 400 ~/.ssh/key
-
           echo >~/.ssh/config "$SSH_CONFIG"
 
           rsync -avzP --exclude=/.git/ ./ srv:/var/www/kenina/
