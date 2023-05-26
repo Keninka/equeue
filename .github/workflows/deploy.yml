@@ -14,14 +14,14 @@ jobs:
 
       - name: Deploy
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.key }}
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
           SSH_CONFIG: |
             Host srv
               User kenina
               IdentityFile ~/.ssh/key
               StrictHostKeyChecking no
               HostName kenina.8086.cf
-              Port 25656
+              Port 25565
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
