@@ -1,0 +1,34 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.key }}
+          SSH_CONFIG: |
+            Host srv
+              User kenina
+              IdentityFile ~/.ssh/key
+              StrictHostKeyChecking no
+              HostName kenina.8086.cf
+              Port 25656
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          echo >~/.ssh/key "$SSH_PRIVATE_KEY"
+          chmod 400 ~/.ssh/key
+
+          echo >~/.ssh/config "$SSH_CONFIG"
+
+          rsync -avzP --exclude=/.git/ ./ srv:/var/www/kenina/
