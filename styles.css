@@ -1,0 +1,117 @@
+header {
+  color: white;
+  text-align: center;
+  background-color: #353535;
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  top: 0; /*Убрать пробел сверху*/
+  left: 0; /*Убрать пробел снизу*/
+}
+
+.header-title {
+  margin-bottom: 0px; /*Поверить не могу, что сработало*/
+}
+
+.status-window {
+  color: white;
+  text-align: center;
+  background-color: red;
+  display: inline-block;
+  position: center fixed;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.left-sidebar {
+  text-align: left;
+  background-color: #858585;
+  top: 130px;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  display: inline-block;
+  position: fixed;
+}
+
+.btn-group button {
+  color: white;
+  background-color: #04aa6d;
+  border: 1px solid green;
+  padding: 15px;
+  width: 100%;
+  display: block; /*Так кнопки будут располагаться сверху вниз*/
+  cursor: pointer; /*Курсор-рука при наведении*/
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /*Без двойных границ*/
+}
+
+.allTicketsScreen {
+  text-align: center;
+  background-color: #dedede;
+  position: fixed;
+  display: inline-block;
+  top: 150px;
+  left: 270px;
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color: none;
+  width: 200px;
+  height: 50px;
+  margin: 0px;
+  border: none;
+  text-align: center;
+  line-height: 45px;
+  font-size: 30px;
+}
+
+#flex1 {
+  animation-name: flexN1;
+  animation-duration: 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: 6;
+}
+
+@keyframes flexN1 {
+  from {
+    color: black;
+  }
+  to {
+    color: red;
+  }
+}
+
+/*
+.left_container {
+  padding: 0px;
+  left: 2px;
+}
+
+
+
+.left_buttons {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  position: center fixed;
+  width: 75%;
+  list-style-type: none;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border: solid black 1px;
+  background-color: #4287f5;
+}
+*/

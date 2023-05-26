@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ЭЛЕКТРОННАЯ ОЧЕРЕДЬ</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Почему не работает относительная ссылка на favicon в другой папке?-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+  </head>
+
+  <header>
+    <h2 class="header-title">ЭЛЕКТРОННАЯ ОЧЕРЕДЬ</h2>
+    <h3 class="status-window">ПРИЕМ ОКОНЧЕН</h3>
+  </header>
+
+  <body>
+    <!-- Левая панель с кнопками-->
+    <div class="left-sidebar">
+      <div class="btn-group">
+        <button id="shift-switch" onclick="shiftSwitch()">
+          ОТКРЫТИЕ СМЕНЫ
+        </button>
+        <button id="take-ticket" onclick="takeTicketAction()">
+          ВЗЯТЬ ТАЛОН
+        </button>
+        <button id="call-ticket" onclick="allTicketsDisplay()">
+          ВЫЗВАТЬ ТАЛОН
+        </button>
+        <button>ПЕРЕНАПРАВЛЕНИЕ ТАЛОНА</button>
+        <button>ЗАКРЫТИЕ ТАЛОНА</button>
+        <button>ПОВТОРНЫЙ ВЫЗОВ</button>
+        <button>СКОРОСТЬ ИГРЫ</button>
+      </div>
+    </div>
+
+    <!--Табло последних вызванных талонов-->
+    <div class="allTicketsScreen">
+      <div class="flex-container">
+        <div id="flex1"></div>
+        <div id="flex2"></div>
+        <div id="flex3"></div>
+        <div id="flex4"></div>
+        <div id="flex5"></div>
+        <div id="flex6"></div>
+        <div id="flex7"></div>
+        <div id="flex8"></div>
+      </div>
+    </div>
+
+    <div></div>
+  </body>
+</html>
