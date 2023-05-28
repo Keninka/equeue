@@ -1,0 +1,29 @@
+{
+  "name": "equeue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "fmt": "prettier --write .",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:fmt": "prettier --check .",
+    "lint": "pnpm lint:css && pnpm lint:fmt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keninka/equeue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keninka/equeue/issues"
+  },
+  "homepage": "https://github.com/Keninka/equeue#readme",
+  "devDependencies": {
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0"
+  },
+  "dependencies": {
+    "prettier": "^2.8.8"
+  }
+}
