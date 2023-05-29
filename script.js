@@ -58,16 +58,35 @@ const takeTicketAction = function () {
   if (yourTicketNumber === -1) {
     //Потом добавить время окончания смены
     console.log(`Смена закрыта. Новые талоны не выдаются!`);
+    //Сброс счетчика активных талонов
+    unservicedTickets = [];
   } else {
     yourTicketNumber++;
-    unservicedTickets.push(yourTicketNumber);
+    unservicedTickets.push(zeroAdder() + yourTicketNumber);
     takenTicketInfo();
     console.log(unservicedTickets);
   }
 };
 
+//Закрытие талона
+const takenTicketRemover = function () {
+  let ticket2RemoveMessage = prompt(
+    `Какой талон вы хотите удалить? Текущие талоны: ${unservicedTickets}`
+  );
+  let ticket2RemoveNumber = parseInt(ticket2RemoveMessage, 10);
+
+  if (isNaN(ticket2RemoveNumber)) {
+    console.log(`Введите номер талона правильно!`);
+  } else {
+    //Дописать удаление талона из массива unservicedTickets
+    console.log(`Талон ${zeroAdder() + ticket2RemoveNumber} удален!`);
+    //Даже если его и не было
+  }
+};
+
 //Открытие и закрытие смены
 const shiftSwitch = function () {
+  //Можно как-то упростить код здесь с помощью ternary operator?
   if (yourTicketNumber === -1) {
     yourTicketNumber = 0;
     document.querySelector(".status-window").style.background = "green";
@@ -84,8 +103,6 @@ const shiftSwitch = function () {
 };
 
 const allTicketsDisplay = function () {};
-
-const takenTicketRemover = function () {};
 
 /*
 const takenTickedAdder = function () {
