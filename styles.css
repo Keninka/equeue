@@ -5,12 +5,12 @@ header {
   width: 100%;
   height: 130px;
   position: fixed;
-  top: 0; /*Убрать пробел сверху*/
-  left: 0; /*Убрать пробел снизу*/
+  top: 0; /* Убрать пробел сверху */
+  left: 0; /* Убрать пробел снизу */
 }
 
 .header-title {
-  margin-bottom: 0px; /*Поверить не могу, что сработало*/
+  margin-bottom: 0; /* Поверить не могу, что сработало */
 }
 
 .status-window {
@@ -40,15 +40,15 @@ header {
   border: 1px solid green;
   padding: 15px;
   width: 100%;
-  display: block; /*Так кнопки будут располагаться сверху вниз*/
-  cursor: pointer; /*Курсор-рука при наведении*/
+  display: block; /* Так кнопки будут располагаться сверху вниз */
+  cursor: pointer; /* Курсор-рука при наведении */
 }
 
 .btn-group button:not(:last-child) {
-  border-bottom: none; /*Без двойных границ*/
+  border-bottom: none; /* Без двойных границ */
 }
 
-.allTicketsScreen {
+.all-tickets-screen {
   text-align: center;
   background-color: #dedede;
   position: fixed;
@@ -69,7 +69,7 @@ header {
   background-color: none;
   width: 200px;
   height: 50px;
-  margin: 0px;
+  margin: 0;
   border: none;
   text-align: center;
   line-height: 45px;
@@ -77,16 +77,17 @@ header {
 }
 
 #flex1 {
-  animation-name: flexN1;
+  animation-name: flex-n1;
   animation-duration: 0.7s;
   animation-direction: alternate;
   animation-iteration-count: 6;
 }
 
-@keyframes flexN1 {
+@keyframes flex-n1 {
   from {
     color: black;
   }
+
   to {
     color: red;
   }
