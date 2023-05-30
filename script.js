@@ -1,5 +1,3 @@
-"use strict";
-
 //Электронная очередь
 /*
 0. Открытие смены +/-;
@@ -54,7 +52,7 @@ const takenTicketInfo = function () {
 };
 
 //Операции при взятии талона
-const takeTicketAction = function () {
+window.takeTicketAction = function () {
   if (yourTicketNumber === -1) {
     //Потом добавить время окончания смены
     console.log(`Смена закрыта. Новые талоны не выдаются!`);
@@ -67,7 +65,7 @@ const takeTicketAction = function () {
 };
 
 //Открытие и закрытие смены
-const shiftSwitch = function () {
+window.shiftSwitch = function () {
   if (yourTicketNumber === -1) {
     yourTicketNumber = 0;
     document.querySelector(".status-window").style.background = "green";
@@ -83,7 +81,7 @@ const shiftSwitch = function () {
   }
 };
 
-const allTicketsDisplay = function () {};
+window.allTicketsDisplay = function () {};
 
 const takenTicketRemover = function () {};
 
