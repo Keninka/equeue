@@ -1,4 +1,4 @@
-/*Шапка*/
+/* Шапка */
 header {
   color: white;
   text-align: center;
@@ -10,12 +10,12 @@ header {
   left: 0; /* Убрать пробел снизу */
 }
 
-/*Заголовок "Электронная очередь"*/
+/* Заголовок "Электронная очередь" */
 .header-title {
   margin-bottom: 0; /* Поверить не могу, что сработало */
 }
 
-/*Плашка "Прием окончен/Ведется прием"*/
+/* Плашка "Прием окончен/Ведется прием" */
 .status-window {
   color: white;
   text-align: center;
@@ -26,7 +26,7 @@ header {
   padding: 15px;
 }
 
-/*Сами кнопки слева*/
+/* Сами кнопки слева */
 .left-sidebar {
   text-align: left;
   background-color: #858585;
@@ -38,7 +38,7 @@ header {
   position: fixed;
 }
 
-/*Свойства кнопок слева*/
+/* Свойства кнопок слева */
 .btn-group button {
   color: white;
   background-color: #04aa6d;
@@ -53,8 +53,8 @@ header {
   border-bottom: none; /* Без двойных границ */
 }
 
-/*Окно | Здесь хочу сравнить удобство работы ручного назначения окон vs flex-контейнеров*/
-.serviceWindow {
+/* Окно | Здесь хочу сравнить удобство работы ручного назначения окон vs flex-контейнеров */
+.service-window {
   text-align: center;
   font-weight: bold;
   background-color: #dedede;
@@ -108,8 +108,8 @@ header {
   height: 25px;
 }
 
-/*Номера обслуживаемых в окнах талонов*/
-.serviceWindowNo {
+/* Номера обслуживаемых в окнах талонов */
+.service-window-no {
   text-align: center;
   font-weight: bold;
   background-color: #dedede;
@@ -161,7 +161,7 @@ header {
   height: 25px;
 }
 
-/*Табло с активными номерами*/
+/* Табло с активными номерами */
 .all-tickets-screen {
   text-align: center;
   background-color: #dedede;
@@ -174,13 +174,13 @@ header {
   border: 1px solid black;
 }
 
-/*Выравнивание номеров на табло*/
+/* Выравнивание номеров на табло */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-/*Свойства флекс-контейнера*/
+/* Свойства флекс-контейнера */
 .flex-container > div {
   background-color: none;
   width: 200px;
@@ -192,7 +192,7 @@ header {
   font-size: 30px;
 }
 
-/*Анимация первого номера на табло*/
+/* Анимация первого номера на табло */
 #flex1 {
   animation-name: flex-n1;
   animation-duration: 0.7s;
