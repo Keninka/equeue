@@ -1,3 +1,4 @@
+/*Шапка*/
 header {
   color: white;
   text-align: center;
@@ -9,10 +10,12 @@ header {
   left: 0; /* Убрать пробел снизу */
 }
 
+/*Заголовок "Электронная очередь"*/
 .header-title {
   margin-bottom: 0; /* Поверить не могу, что сработало */
 }
 
+/*Плашка "Прием окончен/Ведется прием"*/
 .status-window {
   color: white;
   text-align: center;
@@ -23,6 +26,7 @@ header {
   padding: 15px;
 }
 
+/*Сами кнопки слева*/
 .left-sidebar {
   text-align: left;
   background-color: #858585;
@@ -34,6 +38,7 @@ header {
   position: fixed;
 }
 
+/*Свойства кнопок слева*/
 .btn-group button {
   color: white;
   background-color: #04aa6d;
@@ -48,6 +53,115 @@ header {
   border-bottom: none; /* Без двойных границ */
 }
 
+/*Окно | Здесь хочу сравнить удобство работы ручного назначения окон vs flex-контейнеров*/
+.serviceWindow {
+  text-align: center;
+  font-weight: bold;
+  background-color: #dedede;
+  position: fixed;
+  display: inline-block;
+  border: 1px solid black;
+  border-bottom: none;
+  line-height: 25px;
+}
+
+/* Положение каждого окна в отдельности*/
+#win1 {
+  top: 375px;
+  left: 270px;
+  width: 100px;
+  height: 25px;
+}
+
+#win2 {
+  top: 375px;
+  left: 400px;
+  width: 100px;
+  height: 25px;
+}
+
+#win3 {
+  top: 375px;
+  left: 530px;
+  width: 100px;
+  height: 25px;
+}
+
+#win4 {
+  top: 450px;
+  left: 270px;
+  width: 100px;
+  height: 25px;
+}
+
+#win5 {
+  top: 450px;
+  left: 400px;
+  width: 100px;
+  height: 25px;
+}
+
+#win6 {
+  top: 450px;
+  left: 530px;
+  width: 100px;
+  height: 25px;
+}
+
+/*Номера обслуживаемых в окнах талонов*/
+.serviceWindowNo {
+  text-align: center;
+  font-weight: bold;
+  background-color: #dedede;
+  position: fixed;
+  display: inline-block;
+  border: 1px solid black;
+  line-height: 25px;
+}
+
+#winN1 {
+  top: 400px;
+  left: 270px;
+  width: 100px;
+  height: 25px;
+}
+
+#winN2 {
+  top: 400px;
+  left: 400px;
+  width: 100px;
+  height: 25px;
+}
+
+#winN3 {
+  top: 400px;
+  left: 530px;
+  width: 100px;
+  height: 25px;
+}
+
+#winN4 {
+  top: 475px;
+  left: 270px;
+  width: 100px;
+  height: 25px;
+}
+
+#winN5 {
+  top: 475px;
+  left: 400px;
+  width: 100px;
+  height: 25px;
+}
+
+#winN6 {
+  top: 475px;
+  left: 530px;
+  width: 100px;
+  height: 25px;
+}
+
+/*Табло с активными номерами*/
 .all-tickets-screen {
   text-align: center;
   background-color: #dedede;
@@ -60,11 +174,13 @@ header {
   border: 1px solid black;
 }
 
+/*Выравнивание номеров на табло*/
 .flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 
+/*Свойства флекс-контейнера*/
 .flex-container > div {
   background-color: none;
   width: 200px;
@@ -76,6 +192,7 @@ header {
   font-size: 30px;
 }
 
+/*Анимация первого номера на табло*/
 #flex1 {
   animation-name: flex-n1;
   animation-duration: 0.7s;
@@ -92,27 +209,3 @@ header {
     color: red;
   }
 }
-
-/*
-.left_container {
-  padding: 0px;
-  left: 2px;
-}
-
-
-
-.left_buttons {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  position: center fixed;
-  width: 75%;
-  list-style-type: none;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 10px;
-  margin-left: 15px;
-  border: solid black 1px;
-  background-color: #4287f5;
-}
-*/
