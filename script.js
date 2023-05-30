@@ -27,6 +27,10 @@ console.log("Смена открыта!");
 let unservicedTickets = [];
 //Список талонов, обслуживаемых в данный момент
 let servicedTickets = [];
+//Талоны, показанные на табло
+let displayedTickets = [];
+//Очередность талонов
+let ticketsInLine = [];
 //Номер текущего талона. Открытие смены меняет значение на 0. По умолчанию: -1
 let yourTicketNumber = -1;
 
@@ -78,7 +82,7 @@ const takenTicketRemover = function () {
   if (isNaN(ticket2RemoveNumber)) {
     console.log(`Введите номер талона правильно!`);
   } else {
-    //Дописать удаление талона из массива unservicedTickets
+    //Дописать удаление талона из массива unservicedTickets и ticketsInLine
     console.log(`Талон ${zeroAdder() + ticket2RemoveNumber} удален!`);
     //Даже если его и не было
   }
@@ -89,16 +93,18 @@ const shiftSwitch = function () {
   //Можно как-то упростить код здесь с помощью ternary operator?
   if (yourTicketNumber === -1) {
     yourTicketNumber = 0;
+
     document.querySelector(".status-window").style.background = "green";
     document.querySelector(".status-window").textContent = "ВЕДЕТСЯ ПРИЕМ";
     document.querySelector("#shift-switch").textContent = "ЗАКРЫТИЕ СМЕНЫ";
-    console.log(yourTicketNumber);
+    //console.log(yourTicketNumber);
   } else {
     yourTicketNumber = -1;
+
     document.querySelector(".status-window").style.background = "red";
     document.querySelector(".status-window").textContent = "ПРИЕМ ОКОНЧЕН";
     document.querySelector("#shift-switch").textContent = "ОТКРЫТИЕ СМЕНЫ";
-    console.log(yourTicketNumber);
+    //console.log(yourTicketNumber);
   }
 };
 
