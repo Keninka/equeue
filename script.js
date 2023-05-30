@@ -37,7 +37,8 @@ let yourTicketNumber = -1;
 //Общие функции !!!
 
 //Добавление нулей в номер талона
-const zeroAdder = function () {
+
+const padZeroes = function () {
   let zeroes = "";
   if (yourTicketNumber >= 0 && yourTicketNumber < 10) {
     zeroes = "000";
@@ -53,7 +54,7 @@ const zeroAdder = function () {
 
 //Вывод информации о взятом талоне
 const takenTicketInfo = function () {
-  console.log(`Номер вашего талона: ${zeroAdder() + yourTicketNumber}`);
+  console.log(`Номер вашего талона: ${padZeroes() + yourTicketNumber}`);
   console.log(`Перед вами в очереди: ${unservicedTickets.length - 1} человек`);
 };
 
@@ -66,7 +67,7 @@ const takeTicketAction = function () {
     unservicedTickets = [];
   } else {
     yourTicketNumber++;
-    unservicedTickets.push(zeroAdder() + yourTicketNumber);
+    unservicedTickets.push(padZeroes() + yourTicketNumber);
     takenTicketInfo();
     console.log(unservicedTickets);
   }
@@ -83,13 +84,13 @@ const takenTicketRemover = function () {
     console.log(`Введите номер талона правильно!`);
   } else {
     //Дописать удаление талона из массива unservicedTickets и ticketsInLine
-    console.log(`Талон ${zeroAdder() + ticket2RemoveNumber} удален!`);
+    console.log(`Талон ${padZeroes() + ticket2RemoveNumber} удален!`);
     //Даже если его и не было
   }
 };
 
 //Открытие и закрытие смены
-const shiftSwitch = function () {
+let shiftSwitch = function () {
   //Можно как-то упростить код здесь с помощью ternary operator?
   if (yourTicketNumber === -1) {
     yourTicketNumber = 0;
@@ -97,29 +98,19 @@ const shiftSwitch = function () {
     document.querySelector(".status-window").style.background = "green";
     document.querySelector(".status-window").textContent = "ВЕДЕТСЯ ПРИЕМ";
     document.querySelector("#shift-switch").textContent = "ЗАКРЫТИЕ СМЕНЫ";
-    //console.log(yourTicketNumber);
   } else {
     yourTicketNumber = -1;
 
     document.querySelector(".status-window").style.background = "red";
     document.querySelector(".status-window").textContent = "ПРИЕМ ОКОНЧЕН";
     document.querySelector("#shift-switch").textContent = "ОТКРЫТИЕ СМЕНЫ";
-    //console.log(yourTicketNumber);
   }
 };
 
-const allTicketsDisplay = function () {};
-
-/*
-const takenTickedAdder = function () {
-    const newTicket = 
+//Вызвать талон
+const allTicketsDisplay = function () {
+  let ticket2CallMessage = prompt(
+    `Какой талон вы хотите вызвать? Текущие талоны: ${unservicedTickets}`
+  );
+  console.log(`Вызван талон номер ${padZeroes() + ticket2CallMessage}`);
 };
-
-
-
-
-
-
-*/
-
-// Начало программы !!!
