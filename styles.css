@@ -65,7 +65,7 @@ header {
   line-height: 25px;
 }
 
-/* Положение каждого окна в отдельности*/
+/* Положение каждого окна в отдельности */
 #win1 {
   top: 375px;
   left: 270px;
@@ -119,42 +119,42 @@ header {
   line-height: 25px;
 }
 
-#winN1 {
+#win-n1 {
   top: 400px;
   left: 270px;
   width: 100px;
   height: 25px;
 }
 
-#winN2 {
+#win-n2 {
   top: 400px;
   left: 400px;
   width: 100px;
   height: 25px;
 }
 
-#winN3 {
+#win-n3 {
   top: 400px;
   left: 530px;
   width: 100px;
   height: 25px;
 }
 
-#winN4 {
+#win-n4 {
   top: 475px;
   left: 270px;
   width: 100px;
   height: 25px;
 }
 
-#winN5 {
+#win-n5 {
   top: 475px;
   left: 400px;
   width: 100px;
   height: 25px;
 }
 
-#winN6 {
+#win-n6 {
   top: 475px;
   left: 530px;
   width: 100px;
