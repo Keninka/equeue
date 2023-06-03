@@ -1,3 +1,5 @@
+import { padTicketNum } from "./tickets.mjs";
+
 //Электронная очередь
 /*
 0. Открытие смены +/-;
@@ -33,20 +35,6 @@ let ticketsInLine = [];
 let yourTicketNumber = -1;
 
 //Общие функции !!!
-
-//Добавление нулей в номер талона
-
-function padTicketNum(num) {
-  if (num >= 0 && num < 10) {
-    return "000";
-  } else if (num >= 10 && num < 100) {
-    return "00";
-  } else if (num >= 100 && num < 1000) {
-    return "0";
-  } else {
-    return "";
-  }
-}
 
 //Вывод информации о взятом талоне
 function takenTicketInfo() {
