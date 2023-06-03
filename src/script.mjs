@@ -36,25 +36,25 @@ let yourTicketNumber = -1;
 
 //Добавление нулей в номер талона
 
-const padZeroes = function () {
-  let zeroes = "";
-  if (yourTicketNumber >= 0 && yourTicketNumber < 10) {
-    zeroes = "000";
-  } else if (yourTicketNumber >= 10 && yourTicketNumber < 100) {
-    zeroes = "00";
-  } else if (yourTicketNumber >= 100 && yourTicketNumber < 1000) {
-    zeroes = "0";
+function padTicketNum(num) {
+  if (num >= 0 && num < 10) {
+    return "000";
+  } else if (num >= 10 && num < 100) {
+    return "00";
+  } else if (num >= 100 && num < 1000) {
+    return "0";
   } else {
-    zeroes = "";
+    return "";
   }
-  return zeroes;
-};
+}
 
 //Вывод информации о взятом талоне
 function takenTicketInfo() {
-  console.log(`Номер вашего талона: ${padZeroes() + yourTicketNumber}`);
+  console.log(
+    `Номер вашего талона: ${padTicketNum(yourTicketNumber) + yourTicketNumber}`
+  );
   console.log(`Перед вами в очереди: ${unservicedTickets.length - 1} человек`);
-};
+}
 
 //Операции при взятии талона
 window.takeTicketAction = function () {
@@ -65,7 +65,7 @@ window.takeTicketAction = function () {
     unservicedTickets = [];
   } else {
     yourTicketNumber++;
-    unservicedTickets.push(padZeroes() + yourTicketNumber);
+    unservicedTickets.push(padTicketNum(yourTicketNumber) + yourTicketNumber);
     takenTicketInfo();
     console.log(unservicedTickets);
   }
@@ -82,7 +82,9 @@ window.takenTicketRemover = function () {
     console.log(`Введите номер талона правильно!`);
   } else {
     //Дописать удаление талона из массива unservicedTickets и ticketsInLine
-    console.log(`Талон ${padZeroes() + ticket2RemoveNumber} удален!`);
+    console.log(
+      `Талон ${padTicketNum(yourTicketNumber) + ticket2RemoveNumber} удален!`
+    );
     //Даже если его и не было
   }
 };
@@ -110,5 +112,7 @@ window.allTicketsDisplay = function () {
   let ticket2CallMessage = prompt(
     `Какой талон вы хотите вызвать? Текущие талоны: ${unservicedTickets}`
   );
-  console.log(`Вызван талон номер ${padZeroes() + ticket2CallMessage}`);
+  console.log(
+    `Вызван талон номер ${padTicketNum(yourTicketNumber) + ticket2CallMessage}`
+  );
 };
