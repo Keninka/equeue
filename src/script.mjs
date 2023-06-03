@@ -1,5 +1,3 @@
-"use strict";
-
 //Электронная очередь
 /*
 0. Открытие смены +/-;
@@ -53,13 +51,13 @@ const padZeroes = function () {
 };
 
 //Вывод информации о взятом талоне
-const takenTicketInfo = function () {
+function takenTicketInfo() {
   console.log(`Номер вашего талона: ${padZeroes() + yourTicketNumber}`);
   console.log(`Перед вами в очереди: ${unservicedTickets.length - 1} человек`);
 };
 
 //Операции при взятии талона
-const takeTicketAction = function () {
+window.takeTicketAction = function () {
   if (yourTicketNumber === -1) {
     //Потом добавить время окончания смены
     console.log(`Смена закрыта. Новые талоны не выдаются!`);
@@ -74,7 +72,7 @@ const takeTicketAction = function () {
 };
 
 //Закрытие талона
-const takenTicketRemover = function () {
+window.takenTicketRemover = function () {
   let ticket2RemoveMessage = prompt(
     `Какой талон вы хотите удалить? Текущие талоны: ${unservicedTickets}`
   );
@@ -90,7 +88,7 @@ const takenTicketRemover = function () {
 };
 
 //Открытие и закрытие смены
-let shiftSwitch = function () {
+window.shiftSwitch = function () {
   //Можно как-то упростить код здесь с помощью ternary operator?
   if (yourTicketNumber === -1) {
     yourTicketNumber = 0;
@@ -108,7 +106,7 @@ let shiftSwitch = function () {
 };
 
 //Вызвать талон
-const allTicketsDisplay = function () {
+window.allTicketsDisplay = function () {
   let ticket2CallMessage = prompt(
     `Какой талон вы хотите вызвать? Текущие талоны: ${unservicedTickets}`
   );
