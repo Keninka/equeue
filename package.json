@@ -1,13 +1,15 @@
 {
   "name": "equeue",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "script.js",
   "scripts": {
     "fmt": "prettier --write .",
     "lint:css": "stylelint '**/*.css'",
     "lint:fmt": "prettier --check .",
-    "lint": "pnpm lint:css && pnpm lint:fmt"
+    "lint": "pnpm lint:css && pnpm lint:fmt",
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -19,11 +21,10 @@
     "url": "https://github.com/Keninka/equeue/issues"
   },
   "homepage": "https://github.com/Keninka/equeue#readme",
-  "devDependencies": {
-    "stylelint": "^15.6.2",
-    "stylelint-config-standard": "^33.0.0"
-  },
   "dependencies": {
-    "prettier": "^2.8.8"
+    "jasmine": "^5.0.0",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.3",
+    "stylelint-config-standard": "^33.0.0"
   }
 }
